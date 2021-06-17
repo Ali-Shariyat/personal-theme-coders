@@ -1,0 +1,18 @@
+.gallery{
+  .gallery-item{
+    margin-bottom: 30px;
+    > div.flex-column{
+      box-shadow: 0 2px 8px -2px #adadad;
+      border-radius: 10px;
+
+      .gallery-item-img{
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+      }
+      .gallery-item-content{
+        flex: 1;
+
+      }
+    }
+  }
+}

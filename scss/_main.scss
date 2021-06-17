@@ -1,0 +1,310 @@
+html,
+body {
+}
+html{
+  overflow: hidden;
+}
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+[data-color="red"] {
+  .sidebar {
+    background-color: $color-tall-poppy;
+    transition: background-color .3s ease;
+  }
+  .btn {
+    transition: all .5s ease;
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $color-tall-poppy-25;
+    }
+    &.btn-solid {
+      color: $color-white;
+      background-color: $color-tall-poppy;
+      &:hover {
+        color: $color-tall-poppy;
+        background-color: transparent;
+        border: 1px solid $color-tall-poppy;
+      }
+    }
+    &.btn-hollow {
+      border: 1px solid $color-tall-poppy;
+      color: $color-tall-poppy;
+
+      &:hover {
+        color: $color-white;
+        background-color: $color-tall-poppy;
+        border: 1px solid transparent;
+      }
+    }
+  }
+  .continuation-line {
+    background-color: $color-tall-poppy;
+  }
+  .go-to-tab {
+    color: $color-tall-poppy;
+    &:hover {
+      color: $color-tall-poppy-60;
+    }
+  }
+}
+
+[data-color="blue"] {
+  .sidebar {
+    background-color: $color-bondi-blue;
+    transition: background-color .3s ease;
+  }
+  .btn {
+    transition: all .5s ease;
+    &.btn-solid {
+      color: $color-white;
+      background-color: $color-bondi-blue;
+      &:hover {
+        color: $color-bondi-blue;
+        background-color: transparent;
+        border: 1px solid $color-bondi-blue;
+      }
+    }
+    &.btn-hollow {
+      border: 1px solid $color-bondi-blue;
+      color: $color-bondi-blue;
+
+      &:hover {
+        color: $color-white;
+        background-color: $color-bondi-blue;
+        border: 1px solid transparent;
+      }
+    }
+  }
+  .continuation-line{
+    background-color: $color-bondi-blue;
+  }
+  .go-to-tab {
+    color: $color-bondi-blue;
+    &:hover {
+      color: $color-bondi-blue-60;
+    }
+  }
+}
+
+[data-color="orange"] {
+  .sidebar {
+    background-color: $color-california;
+    transition: background-color .3s ease;
+  }
+  .btn {
+    transition: all .5s ease;
+    &.btn-solid {
+      color: $color-white;
+      background-color: $color-california;
+      &:hover {
+        color: $color-california;
+        background-color: transparent;
+        border: 1px solid $color-california;
+      }
+    }
+    &.btn-hollow {
+      border: 1px solid $color-california;
+      color: $color-california;
+
+      &:hover {
+        color: $color-white;
+        background-color: $color-california;
+        border: 1px solid transparent;
+      }
+    }
+  }
+  .continuation-line{
+    background-color: $color-california;
+  }
+  .go-to-tab {
+    color: $color-california;
+    &:hover {
+      color: $color-california-60;
+    }
+  }
+}
+
+[data-color="green"] {
+  .sidebar {
+    background-color: $color-everglade;
+    transition: background-color .3s ease;
+  }
+  .btn {
+    transition: all .5s ease;
+    &.btn-solid {
+      color: $color-white;
+      background-color: $color-everglade;
+      &:hover {
+        color: $color-everglade;
+        background-color: transparent;
+        border: 1px solid $color-everglade;
+      }
+    }
+    &.btn-hollow {
+      border: 1px solid $color-everglade;
+      color: $color-everglade;
+
+      &:hover {
+        color: $color-white;
+        background-color: $color-everglade;
+        border: 1px solid transparent;
+      }
+    }
+  }
+  .continuation-line{
+    background-color: $color-everglade;
+  }
+  .go-to-tab {
+    color: $color-everglade;
+    &:hover {
+      color: $color-everglade-60;
+    }
+  }
+}
+
+[data-color="purple"] {
+  .sidebar {
+    background-color: $color-scarlet-gum;
+    transition: background-color .3s ease;
+  }
+  .btn {
+    transition: all .5s ease;
+    &.btn-solid {
+      color: $color-white;
+      background-color: $color-scarlet-gum;
+      &:hover {
+        color: $color-scarlet-gum;
+        background-color: transparent;
+        border: 1px solid $color-scarlet-gum;
+      }
+    }
+    &.btn-hollow {
+      border: 1px solid $color-scarlet-gum;
+      color: $color-scarlet-gum;
+
+      &:hover {
+        color: $color-white;
+        background-color: $color-scarlet-gum;
+        border: 1px solid transparent;
+      }
+    }
+  }
+  .continuation-line{
+    background-color: $color-scarlet-gum;
+  }
+  .go-to-tab {
+    color: $color-scarlet-gum;
+    &:hover {
+      color: $color-scarlet-gum-60;
+    }
+  }
+}
+.content {
+  width: calc(100% - 260px);
+  .main {
+    min-height: 100vh;
+    > ul {
+      > li {
+        position: absolute;
+        transition: all .5s ease;
+        &:not(.active) {
+          visibility: hidden;
+          opacity: 0;
+          transform: translate(-10px, 0);
+          overflow: hidden;
+
+        }
+        &.active {
+          visibility: visible;
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+        &[data-main-tab] {
+          padding-left: 30px;
+          padding-right: 20px;
+        }
+        .btn {
+
+        }
+        .soldier-content{
+          max-width: calc(100% - 120px);
+        }
+        .phone-number{
+          max-width: calc(100% - 86px);
+        }
+        .email-address{
+          max-width: calc(100% - 92px);
+        }
+        .go-to-tab {
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-right: 60px;
+    width: calc(100% - 60px);
+  }
+
+  @media screen and (max-width: 450px) {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.rtl {
+  .main {
+    > ul {
+      > li {
+        &[data-main-tab] {
+          padding-left: 20px;
+          padding-right: 30px;
+        }
+        .btn {
+
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .main {
+      > ul {
+        > li {
+          &[data-main-tab] {
+            padding-left: 0;
+            padding-right: 0;
+            margin-bottom: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+.change-theme-color{
+  left: 0;
+  z-index: 1;
+  bottom: -46px;
+  transition: all .3s ease;
+  &.active{
+    bottom: 0;
+  }
+  i{
+    border-radius: 15px 15px 0 0 ;
+    cursor: pointer;
+  }
+  ul{
+    border-radius: 15px 15px 0 0;
+    li{
+      border-radius: 10px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+}
