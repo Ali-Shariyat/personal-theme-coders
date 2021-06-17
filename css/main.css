@@ -592,7 +592,9 @@ body {
 
 [data-color=red] .sidebar {
   background-color: #af262a;
-  transition: background-color 0.3s ease;
+}
+[data-color=red] .sidebar .sidebar-items .item.menu-bar {
+  background-color: #af262a;
 }
 [data-color=red] .btn {
   transition: all 0.5s ease;
@@ -630,7 +632,9 @@ body {
 
 [data-color=blue] .sidebar {
   background-color: #1486b5;
-  transition: background-color 0.3s ease;
+}
+[data-color=blue] .sidebar .sidebar-items .item.menu-bar {
+  background-color: #1486b5;
 }
 [data-color=blue] .btn {
   transition: all 0.5s ease;
@@ -665,7 +669,9 @@ body {
 
 [data-color=orange] .sidebar {
   background-color: #ff9800;
-  transition: background-color 0.3s ease;
+}
+[data-color=orange] .sidebar .sidebar-items .item.menu-bar {
+  background-color: #ff9800;
 }
 [data-color=orange] .btn {
   transition: all 0.5s ease;
@@ -700,7 +706,9 @@ body {
 
 [data-color=green] .sidebar {
   background-color: #265728;
-  transition: background-color 0.3s ease;
+}
+[data-color=green] .sidebar .sidebar-items .item.menu-bar {
+  background-color: #265728;
 }
 [data-color=green] .btn {
   transition: all 0.5s ease;
@@ -735,7 +743,9 @@ body {
 
 [data-color=purple] .sidebar {
   background-color: #4e1358;
-  transition: background-color 0.3s ease;
+}
+[data-color=purple] .sidebar .sidebar-items .item.menu-bar {
+  background-color: #4e1358;
 }
 [data-color=purple] .btn {
   transition: all 0.5s ease;
@@ -857,6 +867,7 @@ body {
   width: 260px;
   overflow-y: auto;
   overflow-x: hidden;
+  transition: all 0.5s ease;
   position: sticky;
   top: 0;
   height: 100vh;
