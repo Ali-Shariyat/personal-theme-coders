@@ -169,6 +169,54 @@ ul li {
   background-color: #4e1358;
 }
 
+.bg-blue-ribbon {
+  background-color: #053eff;
+}
+
+.bg-woodsmoke {
+  background-color: #171a21;
+}
+
+.bg-monza {
+  background-color: #bd081c;
+}
+
+.bg-lochmara {
+  background-color: #007ac0;
+}
+
+.bg-vermilion {
+  background-color: #ff4301;
+}
+
+.bg-royal-purple {
+  background-color: #6441a5;
+}
+
+.bg-flush-orange {
+  background-color: #ff7700;
+}
+
+.bg-alizarin-crimson {
+  background-color: #e62117;
+}
+
+.bg-malachite {
+  background-color: #05cc46;
+}
+
+.bg-shark {
+  background-color: #21262c;
+}
+
+.bg-cinnabar {
+  background-color: #e2432a;
+}
+
+.bg-cobalt {
+  background-color: #0047B3;
+}
+
 .bg-instagram {
   background: #f09433;
   background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -306,6 +354,10 @@ ul li {
 
 .icon-font-color-picker:before {
   content: "";
+}
+
+.icon-font-social-network:before {
+  content: "";
 }
 
 .z-index-1 {
@@ -915,6 +967,56 @@ body {
 @media screen and (max-width: 450px) {
   .social-network.social-network-sm {
     right: 0;
+  }
+}
+
+.social-network-page ul {
+  margin: 0 -47px 0 -36px;
+}
+.social-network-page ul li {
+  width: 14.28%;
+}
+@media only screen and (max-width: 585px) {
+  .social-network-page ul li {
+    width: 19.98%;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .social-network-page ul li {
+    width: 24.98%;
+  }
+}
+.social-network-page ul li:hover a {
+  box-shadow: inset 0 0 8px -4px #1f1f1f;
+}
+.social-network-page ul li:hover a i {
+  top: 35%;
+}
+.social-network-page ul li:hover a span {
+  bottom: 0;
+}
+.social-network-page ul li a {
+  width: 100%;
+  transition: all 0.3s ease;
+  height: 60px;
+  box-shadow: inset 0 7px 8px -4px #1f1f1f;
+}
+.social-network-page ul li a i {
+  position: relative;
+  font-size: 24px;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: all 0.3s ease;
+}
+.social-network-page ul li a span {
+  position: relative;
+  bottom: -24px;
+  transition: all 0.3s ease;
+  padding-left: 2px;
+}
+@media only screen and (max-width: 767px) {
+  .social-network-page ul {
+    margin: 0 -16px;
   }
 }
 

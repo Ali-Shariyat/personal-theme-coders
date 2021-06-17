@@ -263,6 +263,54 @@ ul li {
   background-color: $color-scarlet-gum;
 }
 
+.bg-blue-ribbon {
+  background-color: $color-blue-ribbon;
+}
+
+.bg-woodsmoke {
+  background-color: $color-woodsmoke;
+}
+
+.bg-monza {
+  background-color: $color-monza;
+}
+
+.bg-lochmara {
+  background-color: $color-lochmara;
+}
+
+.bg-vermilion {
+  background-color: $color-vermilion;
+}
+
+.bg-royal-purple {
+  background-color: $color-royal-purple;
+}
+
+.bg-flush-orange {
+  background-color: $color-flush-orange;
+}
+
+.bg-alizarin-crimson {
+  background-color: $color-alizarin-crimson;
+}
+
+.bg-malachite {
+  background-color: $color-malachite;
+}
+
+.bg-shark {
+  background-color: $color-shark;
+}
+
+.bg-cinnabar {
+  background-color: $color-cinnabar;
+}
+
+.bg-cobalt {
+  background-color: $color-cobalt;
+}
+
 .bg-instagram {
   background: #f09433;
   background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -409,6 +457,10 @@ ul li {
 
 .icon-font-color-picker:before {
   content: "\f125";
+}
+
+.icon-font-social-network:before {
+  content: "\f126";
 }
 
 //==========================================
