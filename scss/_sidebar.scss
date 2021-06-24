@@ -15,7 +15,11 @@
       }
       &:not(.stop-hover):hover,
       &.active {
-        background-color: $color-tints-of-charcoal;
+        background-color: $color-white;
+        color: $color-mine-shaft;
+        .sidebar-items-title {
+          color: $color-mine-shaft;
+        }
       }
       .fas {
         font-size: 30px;

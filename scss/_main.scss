@@ -15,7 +15,7 @@ body {
 [data-color="red"] {
   .sidebar {
     background-color: $color-tall-poppy;
-    
+
 
     .sidebar-items {
       .item {
@@ -68,11 +68,69 @@ body {
     }
   }
 }
+.dark-theme{
+  &[data-color="red"] {
+    .sidebar {
+      background-color: $color-red-orange;
+
+
+      .sidebar-items {
+        .item {
+          &.menu-bar {
+            background-color: $color-red-orange;
+          }
+        }
+      }
+    }
+
+    .btn {
+      transition: all .5s ease;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem $color-tall-poppy-25;
+      }
+
+      &.btn-solid {
+        color: $color-white;
+        background-color: $color-red-orange;
+
+        &:hover {
+          color: $color-red-orange;
+          background-color: transparent;
+          border: 1px solid $color-red-orange;
+        }
+      }
+
+      &.btn-hollow {
+        border: 1px solid $color-red-orange;
+        color: $color-red-orange;
+
+        &:hover {
+          color: $color-white;
+          background-color: $color-red-orange;
+          border: 1px solid transparent;
+        }
+      }
+    }
+
+    .continuation-line {
+      background-color: $color-red-orange;
+    }
+
+    .go-to-tab {
+      color: $color-red-orange;
+
+      &:hover {
+        color: $color-red-orange-60;
+      }
+    }
+  }
+}
 
 [data-color="blue"] {
   .sidebar {
     background-color: $color-bondi-blue;
-    
+
 
     .sidebar-items {
       .item {
@@ -125,7 +183,7 @@ body {
 [data-color="orange"] {
   .sidebar {
     background-color: $color-california;
-    
+
 
     .sidebar-items {
       .item {
@@ -177,13 +235,13 @@ body {
 
 [data-color="green"] {
   .sidebar {
-    background-color: $color-everglade;
-    
+    background-color: $color-wasabi;
+
 
     .sidebar-items {
       .item {
         &.menu-bar {
-          background-color: $color-everglade;
+          background-color: $color-wasabi;
         }
       }
     }
@@ -194,36 +252,36 @@ body {
 
     &.btn-solid {
       color: $color-white;
-      background-color: $color-everglade;
+      background-color: $color-wasabi;
 
       &:hover {
-        color: $color-everglade;
+        color: $color-wasabi;
         background-color: transparent;
-        border: 1px solid $color-everglade;
+        border: 1px solid $color-wasabi;
       }
     }
 
     &.btn-hollow {
-      border: 1px solid $color-everglade;
-      color: $color-everglade;
+      border: 1px solid $color-wasabi;
+      color: $color-wasabi;
 
       &:hover {
         color: $color-white;
-        background-color: $color-everglade;
+        background-color: $color-wasabi;
         border: 1px solid transparent;
       }
     }
   }
 
   .continuation-line {
-    background-color: $color-everglade;
+    background-color: $color-wasabi;
   }
 
   .go-to-tab {
-    color: $color-everglade;
+    color: $color-wasabi;
 
     &:hover {
-      color: $color-everglade-60;
+      color: $color-wasabi;
     }
   }
 }
@@ -231,7 +289,7 @@ body {
 [data-color="purple"] {
   .sidebar {
     background-color: $color-scarlet-gum;
-    
+
 
     .sidebar-items {
       .item {
@@ -277,6 +335,60 @@ body {
 
     &:hover {
       color: $color-scarlet-gum-60;
+    }
+  }
+}
+.dark-theme{
+  &[data-color="purple"] {
+    .sidebar {
+      background-color: $color-lavender;
+
+
+      .sidebar-items {
+        .item {
+          &.menu-bar {
+            background-color: $color-lavender;
+          }
+        }
+      }
+    }
+
+    .btn {
+      transition: all .5s ease;
+
+      &.btn-solid {
+        color: $color-white;
+        background-color: $color-lavender;
+
+        &:hover {
+          color: $color-lavender;
+          background-color: transparent;
+          border: 1px solid $color-lavender;
+        }
+      }
+
+      &.btn-hollow {
+        border: 1px solid $color-lavender;
+        color: $color-lavender;
+
+        &:hover {
+          color: $color-white;
+          background-color: $color-lavender;
+          border: 1px solid transparent;
+        }
+      }
+    }
+
+    .continuation-line {
+      background-color: $color-lavender;
+    }
+
+    .go-to-tab {
+      color: $color-lavender;
+
+      &:hover {
+        color: $color-lavender-60;
+      }
     }
   }
 }
@@ -400,6 +512,86 @@ body {
       width: 30px;
       height: 30px;
       cursor: pointer;
+    }
+  }
+}
+
+.theme-switch {
+  top: 10px;
+  left: 20px;
+  z-index: 1;
+  width: 35px;
+  height: 35px;
+  user-select: none;
+  img {
+    cursor: pointer;
+
+    &.moon {
+      transform: translate(0, calc(-100% - 10px));
+    }
+
+    &.sun {
+      z-index: 2;
+    }
+
+    &.active {
+      &.up {
+        animation: switch-theme-up .3s forwards;
+        animation-iteration-count: 1;
+      }
+
+      &.down {
+        transform: translate(0, calc(-100% - 10px));
+        animation: switch-theme-down .3s forwards .2s;
+      }
+    }
+  }
+}
+
+@keyframes switch-theme-up {
+  0% {
+    transform: translate(0, 0px);
+  }
+  10% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, calc(-100% - 10px));
+  }
+}
+
+@keyframes switch-theme-down {
+  0% {
+    transform: translate(0, calc(-100% - 10px));
+  }
+  10% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 0%);
+  }
+}
+
+.dark-theme {
+  background-color: $color-tints-of-charcoal;
+  color: #fff;
+  .change-theme-color{
+    .bg-silver{
+      background-color: $color-mine-shaft;
+    }
+  }
+  .sidebar {
+    .sidebar-items {
+      .item {
+        &:not(.stop-hover):hover,
+        &.active {
+          background-color: $color-tints-of-charcoal;
+          color: $color-white;
+          .sidebar-items-title {
+            color: $color-white;
+          }
+        }
+      }
     }
   }
 }

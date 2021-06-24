@@ -71,3 +71,15 @@ $(document).on("click", ".change-theme-color i.fas", function (e) {
 $(document).on("click", ".change-theme-color ul li", function (e) {
     $("body").attr("data-color",$(this).attr("data-color"));
 });
+
+$(document).on("click",".theme-switch",function () {
+    if(!$(this).find(".sun").hasClass("up")){
+        $(this).find(".sun").removeClass("down").addClass("up");
+        $(this).find(".moon").removeClass("up").addClass("down");
+        $("body").addClass("dark-theme");
+    }else{
+        $(this).find(".sun").removeClass("up").addClass("down");
+        $(this).find(".moon").removeClass("down").addClass("up");
+        $("body").removeClass("dark-theme");
+    }
+});
