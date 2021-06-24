@@ -13,10 +13,11 @@ body {
 }
 
 [data-color="red"] {
+  .image-of-profile{
+    background-color: $color-tall-poppy;
+  }
   .sidebar {
     background-color: $color-tall-poppy;
-
-
     .sidebar-items {
       .item {
         &.menu-bar {
@@ -68,12 +69,14 @@ body {
     }
   }
 }
-.dark-theme{
+
+.dark-theme {
   &[data-color="red"] {
+    .image-of-profile{
+      background-color: $color-red-orange;
+    }
     .sidebar {
       background-color: $color-red-orange;
-
-
       .sidebar-items {
         .item {
           &.menu-bar {
@@ -128,10 +131,12 @@ body {
 }
 
 [data-color="blue"] {
+  .image-of-profile {
+    background-color: $color-bondi-blue;
+  }
+
   .sidebar {
     background-color: $color-bondi-blue;
-
-
     .sidebar-items {
       .item {
         &.menu-bar {
@@ -181,10 +186,12 @@ body {
 }
 
 [data-color="orange"] {
+  .image-of-profile {
+    background-color: $color-california;
+  }
+
   .sidebar {
     background-color: $color-california;
-
-
     .sidebar-items {
       .item {
         &.menu-bar {
@@ -234,9 +241,12 @@ body {
 }
 
 [data-color="green"] {
+  .image-of-profile {
+    background-color: $color-wasabi;
+  }
+
   .sidebar {
     background-color: $color-wasabi;
-
 
     .sidebar-items {
       .item {
@@ -287,6 +297,9 @@ body {
 }
 
 [data-color="purple"] {
+  .image-of-profile {
+    background-color: $color-scarlet-gum;
+  }
   .sidebar {
     background-color: $color-scarlet-gum;
 
@@ -338,8 +351,13 @@ body {
     }
   }
 }
-.dark-theme{
+
+.dark-theme {
   &[data-color="purple"] {
+    .image-of-profile {
+      background-color: $color-lavender;
+    }
+
     .sidebar {
       background-color: $color-lavender;
 
@@ -523,6 +541,7 @@ body {
   width: 35px;
   height: 35px;
   user-select: none;
+
   img {
     cursor: pointer;
 
@@ -575,11 +594,13 @@ body {
 .dark-theme {
   background-color: $color-tints-of-charcoal;
   color: #fff;
-  .change-theme-color{
-    .bg-silver{
+
+  .change-theme-color {
+    .bg-silver {
       background-color: $color-mine-shaft;
     }
   }
+
   .sidebar {
     .sidebar-items {
       .item {
@@ -587,6 +608,7 @@ body {
         &.active {
           background-color: $color-tints-of-charcoal;
           color: $color-white;
+
           .sidebar-items-title {
             color: $color-white;
           }
@@ -594,4 +616,13 @@ body {
       }
     }
   }
+}
+
+canvas {
+  width: 120vw;
+  height: 100%;
+  margin-right: -290px;
+}
+.image-of-profile {
+  box-shadow: inset 0 0 16px 0 $color-black-pearl;
 }
